@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="sticky top-0 left-0 w-full bg-blue-50 transition-shadow duration-300 z-50">
+  <div class="container mx-auto px-8 md:px-20">
+    <div class="flex justify-between items-center h-20">
+
+      <!-- Logo -->
+      <img class="w-[160px]" src="./image/logo.png" alt="">
+
+      <!-- Menu Items (Desktop) -->
+      <div class="hidden md:flex items-center space-x-8 text-lg">
+        <a href="#" class="text-blue-500 font-medium">Home</a>
+        <a href="#" class="text-black hover:text-blue-500 transition">About Us</a>
+
+        <div class="relative group">
+          <button class="flex items-center space-x-1 text-black hover:text-blue-500 transition">
+            <span>Services</span>
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="relative group">
+          <button class="flex items-center space-x-1 text-black hover:text-blue-500 transition">
+            <span>Products</span>
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+
+        <a href="#" class="text-black hover:text-blue-500 transition">Blog</a>
+        <a href="#"
+          class="border border-blue-400 px-4 py-1.5 rounded-lg text-black font-medium hover:bg-blue-100 transition">
+          Contact Us
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-black focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+    <a href="#" class="block text-blue-500 font-medium">Home</a>
+    <a href="#" class="block text-black hover:text-blue-500 transition">About Us</a>
+    <a href="#" class="block text-black hover:text-blue-500 transition">Services</a>
+    <a href="#" class="block text-black hover:text-blue-500 transition">Products</a>
+    <a href="#" class="block text-black hover:text-blue-500 transition">Blog</a>
+    <a href="#"
+      class="block border border-blue-400 px-4 py-2 rounded-lg text-center text-black hover:bg-blue-100 transition">
+      Contact Us
+    </a>
+  </div>
+</nav>
+
+<script>
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar.classList.add('shadow-md', 'bg-white');
+    } else {
+      navbar.classList.remove('shadow-md', 'bg-white');
+    }
+  });
+</script>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="bg-black text-white">
+    <div class="container mx-auto relative flex items-center justify-between px-8 md:px-20 py-20">
+      <!-- Left Content -->
+      <div class="max-w-xl space-y-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-snug">
+          End-to-End IT Services,<br>
+          Digital Solutions &<br>
+          Procurement Support<br>
+          in Bangladesh
+        </h1>
+        <button
+          class="px-6 py-3 border border-blue-500 text-blue-500 rounded-md hover:bg-blue-500 hover:text-white transition">
+          Get a Free Consultation
+        </button>
+      </div>
+
+      <!-- Right Image -->
+      <div class="hidden md:block">
+        <img src="./image/hero-banner.gif" alt="Tech Circuit" class="w-[700px]">
+      </div>
+
+      <!-- Sparkle Icon -->
+      <div class="absolute left-[38%] top-10 text-white">
+        ✨
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container mx-auto px-8 md:px-20 py-16">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Left Image Grid -->
+      <div class="grid grid-cols-2 gap-4">
+        <img src="./image/who-we-are-1.webp" alt="office" class="rounded-2xl w-full h-full max-h-[260px] object-cover">
+        <img src="./image/who-we-are-2.webp" alt="office" class="rounded-2xl w-full h-full max-h-[260px] object-cover">
+        <img src="./image/who-we-are-3.webp" alt="office" class="rounded-2xl w-full h-full max-h-[260px] object-cover">
+        <img src="./image/who-we-are-4.webp" alt="office"
+          class="rounded-2xl w-full h-full max-h-[260px] object-cover hover:scale-105 transition-all duration-300 md:col-span-3">
+      </div>
+
+
+      <!-- Right Content -->
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-600 leading-snug">
+          We build data driven digital<br>
+          solutions to help you launch,<br>
+          grow, and lead with purpose.
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+          At Bdcalling IT Ltd., we go beyond delivering technology. We design, build,
+          and scale digital solutions that help businesses launch faster, grow smarter,
+          and lead with confidence.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          With over 13 years of experience, a global team of 3,000+ professionals,
+          and 70,000+ successful projects, we bring together strategy, creativity,
+          and innovation to transform ideas into measurable business impact.
+        </p>
+        <button
+          class="px-6 py-3 border border-blue-500 text-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition">
+          Discover Our Work
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+  <div class="w-full container mx-auto py-20 overflow-hidden flex flex-col sm:flex-row sm:items-center items-start">
+    <div class="w-[300px] shrink-0 px-8 text-gray-600 border-l-4 border-blue-500 bg-white py-2 z-10 sm:text-base text-xl font-semibold sm:text-left mb-8 sm:mb-0">
+      Proud partner at <br /> Hubspot & Segment
+    </div>
+    <div class="flex animate-marquee whitespace-nowrap">
+      <img class="mx-12 h-8 w-36 object-contain" src="./image/amazon.png" alt="">
+      <img class="mx-12 h-8 w-36 object-contain" src="./image/slack.png" alt="">
+      <img class="mx-12 h-8 w-36 object-contain" src="./image/sitepoint.png" alt="">
+      <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-17.8d197d84.png" alt="">
+      <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-4.ad80966f.png" alt="">
+      <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-22.d9d4e1c8.png" alt="">
+      <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-13.8a7cc20e.png" alt="">
+      <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-17.8d197d84.png" alt="">
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+</style>
+
+
+
+  <section class="bg-neutral-950 text-white relative overflow-hidden px-8 md:px-20 py-16">
+    <!-- Ambient background glow -->
+    <div class="pointer-events-none absolute inset-0 -z-10">
+      <div
+        class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] rounded-full blur-3xl opacity-20 bg-gradient-to-tr from-sky-500/40 via-blue-700/30 to-purple-700/20">
+      </div>
+      <div class="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(255,255,255,0.08),rgba(0,0,0,0))]"></div>
+    </div>
+
+    <div class="container mx-auto">
+      <!-- Heading -->
+      <div class="text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+          <span class="text-white/90">Our</span>
+          <span class="bg-blue-400 text-white md:p-2 rounded-xl">
+            Core Services
+          </span>
+        </h2>
+        <p class="mx-auto mt-8 max-w-3xl text-base md:text-lg text-white/70">
+          We provide end-to-end digital transformation solutions to help businesses stay competitive and future‑ready.
+        </p>
+      </div>
+
+      <!-- Cards -->
+      <div class="mt-12 grid grid-cols-1 gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Card 1 -->
+        <article
+          class="group relative rounded-3xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:shadow-[0_10px_35px_-10px_rgba(2,132,199,0.35)]">
+          <h3 class="text-xl md:text-2xl font-semibold leading-snug text-white">
+            Odoo ERP for SMEs & Enterprises
+          </h3>
+
+          <div
+            class="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-1">
+            <div class="relative overflow-hidden rounded-xl">
+              <!-- soft top sheen -->
+              <div
+                class="pointer-events-none absolute inset-x-0 -top-px h-20 bg-gradient-to-b from-white/20 to-transparent opacity-40">
+              </div>
+              <img class="h-44 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                src="https://plus.unsplash.com/premium_photo-1661411311489-46be8dfc82bd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2130"
+                alt="ERP dashboards on a screen" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article
+          class="group relative rounded-3xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:shadow-[0_10px_35px_-10px_rgba(2,132,199,0.35)]">
+          <h3 class="text-xl md:text-2xl font-semibold leading-snug text-white">
+            AI‑Powered Insights &amp; Business Intelligence
+          </h3>
+
+          <div
+            class="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-1">
+            <div class="relative overflow-hidden rounded-xl">
+              <div
+                class="pointer-events-none absolute inset-x-0 -top-px h-20 bg-gradient-to-b from-white/20 to-transparent opacity-40">
+              </div>
+              <img class="h-44 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop"
+                alt="AI and data visualization" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article
+          class="group relative rounded-3xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:shadow-[0_10px_35px_-10px_rgba(2,132,199,0.35)]">
+          <h3 class="text-xl md:text-2xl font-semibold leading-snug text-white">
+            Cybersecurity &amp; Cloud Solutions
+          </h3>
+
+          <div
+            class="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-1">
+            <div class="relative overflow-hidden rounded-xl">
+              <div
+                class="pointer-events-none absolute inset-x-0 -top-px h-20 bg-gradient-to-b from-white/20 to-transparent opacity-40">
+              </div>
+              <img class="h-44 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1600&auto=format&fit=crop"
+                alt="Cloud security concept" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article
+          class="group relative rounded-3xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:shadow-[0_10px_35px_-10px_rgba(2,132,199,0.35)]">
+          <h3 class="text-xl md:text-2xl font-semibold leading-snug text-white">
+            Custom Web &amp; Development
+          </h3>
+
+          <div
+            class="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-1">
+            <div class="relative overflow-hidden rounded-xl">
+              <div
+                class="pointer-events-none absolute inset-x-0 -top-px h-20 bg-gradient-to-b from-white/20 to-transparent opacity-40">
+              </div>
+              <img class="h-44 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop"
+                alt="Code and web development" loading="lazy" />
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="mt-12 grid grid-cols-1 gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Card 1 -->
+        <article
+          class="group relative rounded-3xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:shadow-[0_10px_35px_-10px_rgba(2,132,199,0.35)]">
+          <h3 class="text-xl md:text-2xl font-semibold leading-snug text-white">
+            Odoo ERP for SMEs & Enterprises
+          </h3>
+
+          <div
+            class="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-1">
+            <div class="relative overflow-hidden rounded-xl">
+              <!-- soft top sheen -->
+              <div
+                class="pointer-events-none absolute inset-x-0 -top-px h-20 bg-gradient-to-b from-white/20 to-transparent opacity-40">
+              </div>
+              <img class="h-44 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                src="https://plus.unsplash.com/premium_photo-1661411311489-46be8dfc82bd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2130"
+                alt="ERP dashboards on a screen" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article
+          class="group relative rounded-3xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:shadow-[0_10px_35px_-10px_rgba(2,132,199,0.35)]">
+          <h3 class="text-xl md:text-2xl font-semibold leading-snug text-white">
+            AI‑Powered Insights &amp; Business Intelligence
+          </h3>
+
+          <div
+            class="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-1">
+            <div class="relative overflow-hidden rounded-xl">
+              <div
+                class="pointer-events-none absolute inset-x-0 -top-px h-20 bg-gradient-to-b from-white/20 to-transparent opacity-40">
+              </div>
+              <img class="h-44 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop"
+                alt="AI and data visualization" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article
+          class="group relative rounded-3xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:shadow-[0_10px_35px_-10px_rgba(2,132,199,0.35)]">
+          <h3 class="text-xl md:text-2xl font-semibold leading-snug text-white">
+            Cybersecurity &amp; Cloud Solutions
+          </h3>
+
+          <div
+            class="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-1">
+            <div class="relative overflow-hidden rounded-xl">
+              <div
+                class="pointer-events-none absolute inset-x-0 -top-px h-20 bg-gradient-to-b from-white/20 to-transparent opacity-40">
+              </div>
+              <img class="h-44 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1600&auto=format&fit=crop"
+                alt="Cloud security concept" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article
+          class="group relative rounded-3xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:shadow-[0_10px_35px_-10px_rgba(2,132,199,0.35)]">
+          <h3 class="text-xl md:text-2xl font-semibold leading-snug text-white">
+            Custom Web &amp; Development
+          </h3>
+
+          <div
+            class="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-1">
+            <div class="relative overflow-hidden rounded-xl">
+              <div
+                class="pointer-events-none absolute inset-x-0 -top-px h-20 bg-gradient-to-b from-white/20 to-transparent opacity-40">
+              </div>
+              <img class="h-44 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop"
+                alt="Code and web development" loading="lazy" />
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
