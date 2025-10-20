@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IT Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Swiper.js CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -12,78 +18,78 @@
 
   <!-- Navbar -->
   <nav id="navbar" class="sticky top-0 left-0 w-full bg-blue-50 transition-shadow duration-300 z-50">
-  <div class="container mx-auto px-8 md:px-20">
-    <div class="flex justify-between items-center h-20">
+    <div class="container mx-auto px-8 md:px-20">
+      <div class="flex justify-between items-center h-20">
 
-      <!-- Logo -->
-      <img class="w-[160px]" src="./image/logo.png" alt="">
+        <!-- Logo -->
+        <img class="w-[160px]" src="./image/logo.png" alt="">
 
-      <!-- Menu Items (Desktop) -->
-      <div class="hidden md:flex items-center space-x-8 text-lg">
-        <a href="#" class="text-blue-500 font-medium">Home</a>
-        <a href="#" class="text-black hover:text-blue-500 transition">About Us</a>
+        <!-- Menu Items (Desktop) -->
+        <div class="hidden md:flex items-center space-x-8 text-lg">
+          <a href="#" class="text-blue-500 font-medium">Home</a>
+          <a href="#" class="text-black hover:text-blue-500 transition">About Us</a>
 
-        <div class="relative group">
-          <button class="flex items-center space-x-1 text-black hover:text-blue-500 transition">
-            <span>Services</span>
-            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-black hover:text-blue-500 transition">
+              <span>Services</span>
+              <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-black hover:text-blue-500 transition">
+              <span>Products</span>
+              <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+
+          <a href="#" class="text-black hover:text-blue-500 transition">Blog</a>
+          <a href="#"
+            class="border border-blue-400 px-4 py-1.5 rounded-lg text-black font-medium hover:bg-blue-100 transition">
+            Contact Us
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-black focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
-
-        <div class="relative group">
-          <button class="flex items-center space-x-1 text-black hover:text-blue-500 transition">
-            <span>Products</span>
-            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-        </div>
-
-        <a href="#" class="text-black hover:text-blue-500 transition">Blog</a>
-        <a href="#"
-          class="border border-blue-400 px-4 py-1.5 rounded-lg text-black font-medium hover:bg-blue-100 transition">
-          Contact Us
-        </a>
-      </div>
-
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden">
-        <button id="menu-btn" class="text-black focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
       </div>
     </div>
-  </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
-    <a href="#" class="block text-blue-500 font-medium">Home</a>
-    <a href="#" class="block text-black hover:text-blue-500 transition">About Us</a>
-    <a href="#" class="block text-black hover:text-blue-500 transition">Services</a>
-    <a href="#" class="block text-black hover:text-blue-500 transition">Products</a>
-    <a href="#" class="block text-black hover:text-blue-500 transition">Blog</a>
-    <a href="#"
-      class="block border border-blue-400 px-4 py-2 rounded-lg text-center text-black hover:bg-blue-100 transition">
-      Contact Us
-    </a>
-  </div>
-</nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+      <a href="#" class="block text-blue-500 font-medium">Home</a>
+      <a href="#" class="block text-black hover:text-blue-500 transition">About Us</a>
+      <a href="#" class="block text-black hover:text-blue-500 transition">Services</a>
+      <a href="#" class="block text-black hover:text-blue-500 transition">Products</a>
+      <a href="#" class="block text-black hover:text-blue-500 transition">Blog</a>
+      <a href="#"
+        class="block border border-blue-400 px-4 py-2 rounded-lg text-center text-black hover:bg-blue-100 transition">
+        Contact Us
+      </a>
+    </div>
+  </nav>
 
-<script>
-  const navbar = document.getElementById('navbar');
+  <script>
+    const navbar = document.getElementById('navbar');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      navbar.classList.add('shadow-md', 'bg-white');
-    } else {
-      navbar.classList.remove('shadow-md', 'bg-white');
-    }
-  });
-</script>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add('shadow-md', 'bg-white');
+      } else {
+        navbar.classList.remove('shadow-md', 'bg-white');
+      }
+    });
+  </script>
 
   <script>
     const menuBtn = document.getElementById('menu-btn');
@@ -163,32 +169,39 @@
   </section>
 
   <section>
-  <div class="w-full container mx-auto py-20 overflow-hidden flex flex-col sm:flex-row sm:items-center items-start">
-    <div class="w-[300px] shrink-0 px-8 text-gray-600 border-l-4 border-blue-500 bg-white py-2 z-10 sm:text-base text-xl font-semibold sm:text-left mb-8 sm:mb-0">
-      Proud partner at <br /> Hubspot & Segment
+    <div class="w-full container mx-auto py-20 overflow-hidden flex flex-col sm:flex-row sm:items-center items-start">
+      <div
+        class="w-[300px] shrink-0 px-8 text-gray-600 border-l-4 border-blue-500 bg-white py-2 z-10 sm:text-base text-xl font-semibold sm:text-left mb-8 sm:mb-0">
+        Proud partner at <br /> Hubspot & Segment
+      </div>
+      <div class="flex animate-marquee whitespace-nowrap">
+        <img class="mx-12 h-8 w-36 object-contain" src="./image/amazon.png" alt="">
+        <img class="mx-12 h-8 w-36 object-contain" src="./image/slack.png" alt="">
+        <img class="mx-12 h-8 w-36 object-contain" src="./image/sitepoint.png" alt="">
+        <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-17.8d197d84.png" alt="">
+        <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-4.ad80966f.png" alt="">
+        <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-22.d9d4e1c8.png" alt="">
+        <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-13.8a7cc20e.png" alt="">
+        <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-17.8d197d84.png" alt="">
+      </div>
     </div>
-    <div class="flex animate-marquee whitespace-nowrap">
-      <img class="mx-12 h-8 w-36 object-contain" src="./image/amazon.png" alt="">
-      <img class="mx-12 h-8 w-36 object-contain" src="./image/slack.png" alt="">
-      <img class="mx-12 h-8 w-36 object-contain" src="./image/sitepoint.png" alt="">
-      <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-17.8d197d84.png" alt="">
-      <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-4.ad80966f.png" alt="">
-      <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-22.d9d4e1c8.png" alt="">
-      <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-13.8a7cc20e.png" alt="">
-      <img class="mx-12 h-8 w-36 object-contain" src="./image/partner-17.8d197d84.png" alt="">
-    </div>
-  </div>
-</section>
+  </section>
 
-<style>
-@keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-.animate-marquee {
-  animation: marquee 20s linear infinite;
-}
-</style>
+  <style>
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .animate-marquee {
+      animation: marquee 20s linear infinite;
+    }
+  </style>
 
 
 
@@ -382,6 +395,242 @@
       </div>
     </div>
   </section>
+
+
+  <section class="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-12 md:py-16 rounded-2xl mx-4 md:mx-16 my-8">
+    <div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+      <!-- Item 1 -->
+      <div>
+        <div class="flex justify-center mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
+            class="w-10 h-10">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15 10.5a3 3 0 11-6 0m6 0a3 3 0 11-6 0m12 6.75a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold">50,000+</h2>
+        <p class="mt-1 text-gray-100 text-sm">Clients Served Across<br>The World</p>
+      </div>
+
+      <!-- Item 2 -->
+      <div>
+        <div class="flex justify-center mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
+            class="w-10 h-10">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold">70,000+</h2>
+        <p class="mt-1 text-gray-100 text-sm">Successful Projects<br>Delivered</p>
+      </div>
+
+      <!-- Item 3 -->
+      <div>
+        <div class="flex justify-center mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
+            class="w-10 h-10">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 4.5v6m0 0l2.25-2.25M12 10.5l-2.25-2.25m6.75 5.25A4.5 4.5 0 1112 6a4.5 4.5 0 016.75 7.5z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold">3,000+</h2>
+        <p class="mt-1 text-gray-100 text-sm">Experts Working<br>Across Disciplines</p>
+      </div>
+
+      <!-- Item 4 -->
+      <div>
+        <div class="flex justify-center mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
+            class="w-10 h-10">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 8.25v7.5m0 0l3-3m-3 3l-3-3M4.5 12a7.5 7.5 0 1115 0 7.5 7.5 0 01-15 0z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold">13+</h2>
+        <p class="mt-1 text-gray-100 text-sm">Years of Experience in<br>Digital Transformation</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Testimonials Section -->
+  <section
+    class="relative bg-black bg-cover bg-center bg-no-repeat bg-blend-overlay py-20 px-5 md:px-20 overflow-hidden">
+    <div class="text-center mb-12">
+      <h2 class="inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-lg font-semibold mb-4">Client
+        Testimonials</h2>
+      <h3 class="text-3xl md:text-4xl font-bold mt-6">What clients say</h3>
+      <p class="text-gray-300 mt-3 max-w-2xl mx-auto text-sm md:text-base">
+        Forget the suits, hear it straight from the folks who've seen the Bdcalling magic happen.
+      </p>
+    </div>
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper max-w-6xl mx-auto pb-12">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div
+          class="swiper-slide backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg p-6 flex flex-col mx-2">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg"
+              class="w-12 h-12 rounded-full object-cover border border-white/30" alt="Anika Anjum">
+            <div>
+              <h4 class="font-bold text-white">Anika Anjum</h4>
+              <p class="text-sm text-gray-300">CEO of Spinro</p>
+            </div>
+          </div>
+          <div class="text-yellow-400 mb-3">★★★★★</div>
+          <p class="text-sm text-gray-200 mb-4">
+            Bdcalling helped us unlock the real value of our data. Their AI modeling solutions provided accurate
+            predictions that improved our planning and reduced risks.
+          </p>
+          <p class="text-sm text-gray-400 mb-2">Dhaka, Bangladesh</p>
+          <p class="text-sm text-blue-400 font-semibold">✔ Verified</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div
+          class="swiper-slide backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg p-6 flex flex-col mx-2">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg"
+              class="w-12 h-12 rounded-full object-cover border border-white/30" alt="John Smith">
+            <div>
+              <h4 class="font-bold text-white">John Smith</h4>
+              <p class="text-sm text-gray-300">CTO of TechCorp</p>
+            </div>
+          </div>
+          <div class="text-yellow-400 mb-3">★★★★★</div>
+          <p class="text-sm text-gray-200 mb-4">
+            Bdcalling built us an AI-driven mobile app that feels truly intelligent. It has greatly boosted engagement
+            and satisfaction.
+          </p>
+          <p class="text-sm text-gray-400 mb-2">New York, USA</p>
+          <p class="text-sm text-blue-400 font-semibold">✔ Verified</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="swiper-slide backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between mx-2">
+          <img src="./image/testimonial.webp" alt="Abstract" class="w-full h-48 object-cover opacity-90">
+          <div class="p-6">
+            <h4 class="text-3xl font-bold text-white">50000+</h4>
+            <p class="text-sm text-gray-300">Clients Served</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Arrows -->
+      <div class="swiper-button-next text-white"></div>
+      <div class="swiper-button-prev text-white"></div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination mt-6"></div>
+    </div>
+
+  </section>
+
+  <!-- Swiper Initialization -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+
+
+  <footer class="bg-gradient-to-t from-[#09005C] to-[#0D0A3C] text-white py-16">
+    <div class="container mx-auto px-8 md:px-20">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+        <!-- Column 1: Logo & Description -->
+        <div class="space-y-4">
+          <img class="w-[160px] text-transparent" src="./image/logo.png" alt="Logo">
+          <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+            Empowering businesses with ERP, AI, Cloud & Digital Solutions for growth and sustainability.
+          </p>
+        </div>
+
+        <!-- Column 2: Corporate Office -->
+        <div class="space-y-2">
+          <h3 class="text-white font-semibold mb-2">Corporate Office</h3>
+          <div class="flex items-start gap-2">
+            <i class="fa-solid fa-location-dot mt-1"></i>
+            <p class="text-gray-300">Daisy Garden, House 14, Block A, Banasree, Dhaka-1219</p>
+          </div>
+          <a href="#"
+            class="text-blue-400 text-sm flex items-center gap-1 mt-1 transition-colors duration-300 hover:text-white">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View on map
+          </a>
+        </div>
+
+        <!-- Column 3: Mohakhali Branch -->
+        <div class="space-y-2">
+          <h3 class="text-white font-semibold mb-2">Mohakhali Branch</h3>
+          <div class="flex items-start gap-2">
+            <i class="fa-solid fa-location-dot mt-1"></i>
+            <p class="text-gray-300">Kaderia Tower, J-28/8/B, Mohakhali C/A, Dhaka 1213, Bangladesh</p>
+          </div>
+          <a href="#"
+            class="text-blue-400 text-sm flex items-center gap-1 mt-1 transition-colors duration-300 hover:text-white">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View on map
+          </a>
+        </div>
+
+        <!-- Column 4: Social Links -->
+        <div class="space-y-3">
+          <h3 class="text-white font-semibold mb-2">Follow Us</h3>
+          <div class="flex flex-col gap-2">
+            <a href="#"
+              class="flex items-center gap-2 text-gray-300 hover:text-blue-500 transition-colors duration-300">
+              <i class="fa-brands fa-facebook-f text-lg"></i> Facebook
+            </a>
+            <a href="#" class="flex items-center gap-2 text-gray-300 hover:text-red-500 transition-colors duration-300">
+              <i class="fa-brands fa-youtube text-lg"></i> Youtube
+            </a>
+            <a href="#"
+              class="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors duration-300">
+              <i class="fa-brands fa-linkedin-in text-lg"></i> Linkedin
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="mt-12 text-center text-gray-400 text-sm border-t border-gray-700 pt-6">
+        &copy; 2025 Your Company. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+
 
 </body>
 
